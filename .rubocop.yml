@@ -41,9 +41,6 @@ Style/DefWithParentheses:
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
 
-  Style/EndOfLine:
-  EnforcedStyle: always
-  
 Layout/HashAlignment:
   EnforcedColonStyle: key
 Layout/ExtraSpacing:
