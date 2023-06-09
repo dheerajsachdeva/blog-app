@@ -1,7 +1,5 @@
 require 'rails_helper'
 
-
-
 describe Like, type: :model do
   user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos', bio: 'Teacher from Mexico.',
                      posts_counter: 0)

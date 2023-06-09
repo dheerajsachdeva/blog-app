@@ -25,7 +25,6 @@ RSpec.describe User, type: :model do
     expect(subject).to_not be_valid
   end
 
-
   it 'three recent posts' do
     user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos', bio: 'Teacher from Mexico.',
                        posts_counter: 0)

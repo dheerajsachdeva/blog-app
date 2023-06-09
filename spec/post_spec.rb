@@ -27,7 +27,6 @@ RSpec.describe Post, type: :model do
     Comment.create(author: user, post:, text: 'This is my fourth comment')
     Comment.create(author: user, post:, text: 'This is my fifth comment')
 
-
     expect(post.recent_comments.size).to eq(5)
     expect(post.recent_comments[0].text).to eq('This is my fifth comment')
     expect(post.recent_comments[1].text).to eq('This is my fourth comment')
