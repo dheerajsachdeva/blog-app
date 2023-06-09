@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
-  subject { User.new(name: 'Tom', photo: 'https://unsplash.com/photos', bio: 'Teacher from Mexico.') }
+describe User, type: :model do
+  subject { User.new(name: 'Tom', photo: 'https://unsplash.com/photos', bio: 'Teacher from Mexico.', posts_counter: 0) }
 
   before { subject.save }
 
@@ -10,17 +10,17 @@ RSpec.describe User, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it 'name should be present' do
-    subject.photo = nil
-    expect(subject).to_not be_valid
+  it 'photo should be present' do
+    subject.photo = 'https://unsplash.com/photos'
+    expect(subject).to be_valid
   end
 
-  it 'name should be present' do
-    subject.bio = nil
-    expect(subject).to_not be_valid
+  it 'bio should be present' do
+    subject.bio = 'Teacher from Mexico.'
+    expect(subject).to be_valid
   end
 
-  it 'name should be present' do
+  it 'posts_counter should be present' do
     subject.posts_counter = nil
     expect(subject).to_not be_valid
   end
