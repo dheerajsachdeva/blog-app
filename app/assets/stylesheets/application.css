@@ -1,9 +1,10 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center;
 }
 
@@ -12,51 +13,91 @@ a:active,
 a:visited {
   color: #ff1414;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
-.user,
-.post {
-    width: 90%;
+
+.user_row {
+  width: 90%;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 
 .user_row,
 .post_row,
-.user_block{
-    display: flex;
+.user_block,
+.button,
+.counters {
+  display: flex;
 }
 
 .user_container,
 .user_row,
 .post_container,
-.post_row
-{
-    gap: 1.5rem;
+.post_row {
+  gap: 1.5rem;
 }
 
+.user_container,
+.user_bio,
+.user_posts,
 .user_row,
-.post_row {
-    width: 100%;
+.post_comments,
+.home {
+  margin-left: 5%;
+}
+
+.user_container {
+  width: 100%;
 }
 
 .user,
 .post {
-    flex-direction: column;
+  flex-direction: column;
 }
 
-.user_image{
-    width: 10%;
-    border: 1px solid #a70000 ;
+.user_image {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #a70000;
 }
 
 .user_block,
 .user_bio,
 .user_posts,
-.post_comments{
-    border: 1px solid #000000 ;
-    padding: 0 1rem;
-    width: 80%;
+.post_comments {
+  border: 1px solid #000;
+  padding: 1rem 1rem;
+  width: 80%;
 }
 
-.user_block p{
-    text-align: right;
+.user_block {
+  justify-content: space-between;
+}
+
+p,
+.user_bio,
+.user_posts,
+.button,
+.post_comments {
+  margin-top: 3%;
+}
+
+.user_block p {
+  text-align: right;
+  align-self: self-end;
+  font-size: 1rem;
+}
+
+.button {
+  justify-content: center;
+  border: 1px solid blue;
+  margin: 20px 30%;
+}
+
+.button:hover {
+  background-color: aqua;
+}
+
+.counters {
+  justify-content: right;
 }
