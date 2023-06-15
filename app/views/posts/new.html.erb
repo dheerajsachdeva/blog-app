@@ -1,0 +1,17 @@
+<div class = 'new_post'>
+<h2>Create New Post</h2>
+<%= link_to 'Back to Posts', posts_path %>
+<%= form_with model: @post do |form| %>
+<%= form.label :title %>
+  <%= form.text_field :title %>
+  <% @post.errors.full_messages_for(:title).each do |message| %>
+  <%= message %>
+  <% end %>
+  <%= form.label :text %>
+  <%= form.text_area :text %>
+  <%@post.errors.full_messages_for(:text).each do |message|%>
+  <%=message%>
+  <% end %>
+  <%= form.submit class: 'btn_create_post' %>
+<% end %>
+</div>
