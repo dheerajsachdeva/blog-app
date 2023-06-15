@@ -13,6 +13,9 @@
   - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
   - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -101,7 +104,7 @@ Run: rspec to run tests
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👥 Authors <a name="DHEERAJ SACHDEVA"></a>
+## 👥 Authors <a name="authors"></a>
 
 👤 **DHEERAJ SACHDEVA**
 
