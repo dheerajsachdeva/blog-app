@@ -130,7 +130,7 @@ Run: rspec to run tests
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the <a href = "repo:https://github.com/dheerajsachdeva/blog-app-rails.git"> repo </a>
+Feel free to check the [repo](https://github.com/dheerajsachdeva/blog-app-rails.git) 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
