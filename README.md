@@ -1,3 +1,5 @@
+![Dheeraj logo](image.png)
+
 <a name="readme-top"></a>
 
   <h3><b>Blog App</b></h3>
@@ -128,7 +130,7 @@ Run: rspec to run tests
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [repo:https://github.com/dheerajsachdeva/blog-app-rails.git]
+Feel free to check the [repo](https://github.com/dheerajsachdeva/blog-app) 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
