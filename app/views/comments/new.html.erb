@@ -1,7 +1,7 @@
 <div class = 'new_comment'>
 <h2>Create New Comment</h2>
 <%= link_to 'Back to Posts', posts_path %>
-<%= form_with(model: @comment, url: new_comment_path(user_id: @user.id, post_id: @post.id), local: true) do |form| %>
+<%= form_with url: new_comment_path, method: :post do |form| %>
    <%= form.label :text %>
   <%= form.text_area :text %>
    <%= form.submit class: 'btn_create_comment' %>

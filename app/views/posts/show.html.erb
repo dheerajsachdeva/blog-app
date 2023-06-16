@@ -8,6 +8,7 @@
 <p><%= @post.text %><p>
 </div>
 </div>
+<button class = 'btn_add_comment'><%= link_to 'Add Comment', new_comment_path%></button>
 <div class = 'post_comments'>
  <% @post.comments.each do |comment| %>
  <p><%= comment.author.name%>: <%= comment.text%></p>
