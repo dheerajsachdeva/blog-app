@@ -43,6 +43,11 @@ RSpec.describe 'User Show Page', type: :feature do
       expect(page.html).to include('See All Posts')
     end
 
+    it 'When I click a users post, it redirects me to that posts show page.' do
+      click_on @fourth_post.title
+      expect(current_path).to eq("/users/#{@user1.id}/posts/#{@fourth_post.id}")
+    end
+
     it 'should show next_path when clicked on see all posts' do
       click_on 'See All Posts'
       expect(current_path).to eq("/users/#{@user1.id}/posts")
