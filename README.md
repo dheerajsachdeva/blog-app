@@ -108,6 +108,10 @@ Run: rspec to run tests
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 **Adejuwon Daniel Adesanya**
+- GitHub: [@githubhandle](https://github.com/Ade179)
+
+
 👤 **DHEERAJ SACHDEVA**
 
 - GitHub: [@githubhandle](https://github.com/dheerajsachdeva)
@@ -142,7 +146,7 @@ If you like this project please follow me on github
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse.
+I would like to thank Microverse and my Coding partner Daniel.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
