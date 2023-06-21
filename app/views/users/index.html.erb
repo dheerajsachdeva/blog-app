@@ -1,5 +1,8 @@
 <div class = 'user'>
-<h1> Welcome to Users List</h1>
+<div style="display: flex; justify-content: flex-end; margin-right: 50px;">
+  <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+</div>
+<h1>Welcome <%= @user.name%> </h1>
 <div class = 'user_container'>
 <% @users.each do |user|%>
 <div class = 'user_row'>
