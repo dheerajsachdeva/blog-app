@@ -5,10 +5,10 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 ruby '3.2.2'
 
+gem 'devise'
 gem 'pagy'
 gem 'rails-controller-testing'
 gem 'rspec-rails'
-gem 'devise'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.5'
