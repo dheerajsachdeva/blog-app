@@ -21,7 +21,7 @@
 <p class = 'counters'> Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
 </div>
 <% if can? :destroy, post%>
-      <%= form_with url: "/users/#{@author.id}/posts/#{@post.id}" , method: :delete do |f|%>
+      <%= form_with url: "/users/#{@current_user.id}/posts/#{post.id}" , method: :delete do |f|%>
         <%= f.submit 'Delete' %>
       <%end%>
     <%end%>

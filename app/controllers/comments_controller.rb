@@ -1,3 +1,5 @@
+require 'cancancan'
+
 class CommentsController < ApplicationController
   load_and_authorize_resource
 
@@ -6,7 +8,6 @@ class CommentsController < ApplicationController
   end
 
   def create
-    puts 'Dheeraj'
     @post = Post.find(params[:id])
     @comment = @post.comments.new(author: current_user, **comment_params)
     puts @comment
