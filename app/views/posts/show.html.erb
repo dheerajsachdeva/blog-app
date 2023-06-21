@@ -18,6 +18,11 @@
 <div class = 'post_comments'>
  <% @post.comments.each do |comment| %>
  <p><%= comment.author.name%>: <%= comment.text%></p>
+ <% if can? :destroy, comment%>
+      <%= form_with url: "/users/#{@post.author.id}/posts/#{@post.id}/comments" , method: :delete do |f|%>
+        <%= f.submit 'Delete' %>
+      <%end%>
+    <%end%>
 <%end%>
 <%else%>
 <div class = "post_comments"> No Comments</div>
