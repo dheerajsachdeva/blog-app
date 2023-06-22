@@ -24,12 +24,11 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @comment.destroy
     redirect_back(fallback_location: root_path)
-   end
+  end
 
   private
 
   def comment_params
     params.require(:comment).permit(:text)
   end
-
- end
+end
