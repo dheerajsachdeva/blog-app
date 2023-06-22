@@ -14,17 +14,17 @@ class CommentsController < ApplicationController
     puts comment_params
     puts @post
     if @comment.save
-      redirect_to posts_path(@post.author, @post), notice: 'Comment Created Successfully'
+      redirect_to user_post_path(@post.author, @post), notice: 'Comment Created Successfully'
     else
       render :new
     end
   end
 
   def destroy
-    @post = Post.find(params[:id])
-    @comment = @post.comments.find_by(post_id: @post.id)
+    @comment = Comment.find(params[:id])
     @comment.destroy
-  end
+    redirect_back(fallback_location: root_path)
+   end
 
   private
 
