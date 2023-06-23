@@ -6,7 +6,6 @@ RSpec.describe 'api/comment', type: :request do
     parameter name: 'user_id', in: :path, type: :string, description: 'user_id'
     parameter name: 'post_id', in: :path, type: :string, description: 'post_id'
 
-
     get('list comments') do
       response(200, 'successful') do
         let(:user_id) { '123' }
