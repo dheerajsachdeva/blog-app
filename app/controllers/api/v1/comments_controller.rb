@@ -1,45 +1,45 @@
 class Api::V1::CommentsController < ApplicationController
-  
   skip_before_action :authenticate_user!
   protect_from_forgery with: :null_session
 
   def index
-        post = Post.find(params[:post_id])
+    post = Post.find(params[:post_id])
     comments = post.comments
     if comments
-           render json: {status: 'Success', message: 'Loaded Comments', data: comments}, status: :ok
+      render json: { status: 'Success', message: 'Loaded Comments', data: comments }, status: :ok
     else
-      render json: {status: 'Not Found', message: 'Details not found', data: comments.errors}, status: :unprocessable_entity
+      render json: { status: 'Not Found', message: 'Details not found', data: comments.errors },
+             status: :unprocessable_entity
+    end
   end
-end
 
-#   def show
-#   end
+  #   def show
+  #   end
 
   def create
     user = User.find(params[:user_id])
-    post = Post.find(params[:post_id])
+    Post.find(params[:post_id])
     current_post = Post.find(params[:post_id])
     comments = current_post.comments.new(comment_params)
     comments.post_id = current_post.id
     comments.author_id = user.id
     if comments.save
-      render json: {status: 'Success', message: 'Comment Created', data: comments}, status: :ok
+      render json: { status: 'Success', message: 'Comment Created', data: comments }, status: :ok
     else
-      render json: {status: 'Not Found', message: 'Details not found', data: comments.errors}, status: :unprocessable_entity
+      render json: { status: 'Not Found', message: 'Details not found', data: comments.errors },
+             status: :unprocessable_entity
+    end
   end
-end
 
-#   def update
-#   end
+  #   def update
+  #   end
 
-#   def destroy
-#   end
+  #   def destroy
+  #   end
 
   private
 
   def comment_params
     params.require(:comment).permit(:text)
   end
-
 end
