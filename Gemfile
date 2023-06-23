@@ -75,6 +75,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'cancancan', '~> 3.5'
   gem 'capybara'
+  gem 'devise-jwt'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
