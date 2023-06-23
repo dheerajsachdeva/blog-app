@@ -1,38 +1,23 @@
-require 'rails_helper'
+require 'swagger_helper'
 
-RSpec.describe 'Api::V1::Posts', type: :request do
-  describe 'GET /index' do
-    it 'returns http success' do
-      get '/api/v1/posts/index'
-      expect(response).to have_http_status(:success)
-    end
-  end
+RSpec.describe 'api/posts', type: :request do
+  path '/api/v1/users/{user_id}/posts' do
+    # You'll want to customize the parameter types...
+    parameter name: 'user_id', in: :path, type: :string, description: 'user_id'
 
-  describe 'GET /show' do
-    it 'returns http success' do
-      get '/api/v1/posts/show'
-      expect(response).to have_http_status(:success)
-    end
-  end
+    get('list posts') do
+      response(200, 'successful') do
+        let(:user_id) { '123' }
 
-  describe 'GET /create' do
-    it 'returns http success' do
-      get '/api/v1/posts/create'
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe 'GET /update' do
-    it 'returns http success' do
-      get '/api/v1/posts/update'
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe 'GET /destroy' do
-    it 'returns http success' do
-      get '/api/v1/posts/destroy'
-      expect(response).to have_http_status(:success)
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
     end
   end
 end
