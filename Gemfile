@@ -9,7 +9,7 @@ gem 'devise'
 gem 'pagy'
 gem 'rails-controller-testing'
 gem 'rspec-rails'
- gem 'rswag'
+gem 'rswag'
 gem 'rswag-api'
 gem 'rswag-ui'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -81,7 +81,4 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
   # Gemfile
- 
- 
-
 end
